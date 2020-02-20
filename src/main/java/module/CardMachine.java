@@ -32,17 +32,17 @@ public class CardMachine {
         return randomSet;
     }
 
-    public CardType getTypeFromNum(int num) {
+    public String getTypeFromNum(int num) {
         int remains = num % 4;
         switch (remains) {
             case 0:
-                return CardType.values()[0];
+                return CardType.SPADE.getName();
             case 1:
-                return CardType.values()[1];
+                return CardType.HEART.getName();
             case 2:
-                return CardType.values()[2];
+                return CardType.CLUB.getName();
             case 3:
-                return CardType.values()[3];
+                return CardType.DIAMOND.getName();
             default:
                 return null;
         }
